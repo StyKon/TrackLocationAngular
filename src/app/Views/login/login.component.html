@@ -1,0 +1,45 @@
+<div class="kt-grid kt-grid--ver kt-grid--root">
+  <div class="kt-grid kt-grid--hor kt-grid--root  kt-login kt-login--v4 kt-login--signin" id="kt_login">
+		<div class="kt-grid__item kt-grid__item--fluid kt-grid kt-grid--hor" style="background-image: url(../../assets/media/bg/bg-2.jpg);">
+			<div class="kt-grid__item kt-grid__item--fluid kt-login__wrapper">
+				<div class="kt-login__container">
+					<div class="kt-login__logo">
+						<a>
+							<img src="../../assets/media/logos/logo-5.png">
+						</a>
+					</div>
+					<div class="kt-login__head">
+						<h3 class="kt-login__title">Sign In To Admin</h3>
+					</div>
+			<form class="kt-form" [formGroup]="LoginForm"
+                (ngSubmit)="Login()" novalidate>
+                  <div class="input-group">
+                    <input class="form-control" type="email" placeholder="Email" formControlName="Email" required>
+                    <span *ngIf="Email.touched && Email.invalid" class="error"><sup>*</sup>Please provide email</span>
+                    <span *ngIf="Email.errors?.pattern" class="error"><sup>*</sup>Please enter correct email</span>
+                  </div>
+                  <div class="input-group">
+                    <input class="form-control" type="password" placeholder="Password" formControlName="Password" required>
+                    <span *ngIf="Password.touched && Password.invalid" class="error"><sup>*</sup>Please enter Password valide</span>
+
+                  </div>
+                  <div class="row kt-login__extra">
+                  <div class="col">
+                    <label class="kt-checkbox">
+                      <input type="checkbox" name="remember"> Remember me
+                      <span></span>
+                    </label>
+                  </div>
+                  <div class="col kt-align-right">
+                    <a href="javascript:;" id="kt_login_forgot" class="kt-login__link">Forget Password ?</a>
+                  </div>
+                </div>
+                <div class="kt-login__actions">
+                  <button  type="submit" class="btn btn-brand btn-pill kt-login__btn-primary">Sign In</button>
+                </div>
+            </form>
+				</div>
+			</div>
+		</div>
+    </div>
+</div>

@@ -1,0 +1,81 @@
+<div class="kt-grid kt-grid--ver kt-grid--root">
+  <div class="kt-grid kt-grid--hor kt-grid--root  kt-login kt-login--v4 kt-login--signin" id="kt_login">
+				<div class="kt-grid__item kt-grid__item--fluid kt-grid kt-grid--hor" style="background-image: url(../../assets/media/bg/bg-2.jpg);">
+					<div class="kt-grid__item kt-grid__item--fluid kt-login__wrapper">
+						<div class="kt-login__container">
+							<div class="kt-login__logo">
+								<a>
+									<img src="../../assets/media/logos/logo-5.png">
+								</a>
+              </div>
+
+								<div class="kt-login__head">
+									<h3 class="kt-login__title">Sign Up</h3>
+									<div class="kt-login__desc">Enter your details to create your account:</div>
+								</div>
+								<form class="kt-form" [formGroup]="signupForm"
+                (ngSubmit)="registerUser()" novalidate>
+									<div class="input-group">
+                    <input class="form-control" type="text" placeholder="FirstName" formControlName="FirstName" required>
+                    <span *ngIf="FirstName.touched && FirstName.invalid" class="error"><sup>*</sup>Please enter atleast First name</span>
+                    <span *ngIf="FirstName.errors?.minlength" class="error"><sup>*</sup>Name shouldn't be less than 3 words</span>
+									</div>
+									<div class="input-group">
+                    <input class="form-control" type="text" placeholder="LastName" formControlName="LastName" required>
+                    <span *ngIf="LastName.touched && LastName.invalid" class="error"><sup>*</sup>Please enter atleast Last name</span>
+                    <span *ngIf="LastName.errors?.minlength" class="error"><sup>*</sup>Name shouldn't be less than 3 words</span>
+									</div>
+									<div class="input-group">
+                    <input class="form-control" type="text" placeholder="Cin" formControlName="Cin" required>
+                    <span *ngIf="Cin.touched && Cin.invalid" class="error"><sup>*</sup>Please enter CIN valide</span>
+                    <span *ngIf="Cin.errors?.minlength" class="error"><sup>*</sup>Name shouldn't be less than 8 numbers</span>
+									</div>
+									<div class="input-group">
+                    <input class="form-control" type="text" placeholder="NumPassport" formControlName="NumPassport" required>
+                    <span *ngIf="NumPassport.touched && NumPassport.invalid" class="error"><sup>*</sup>Please enter Passport number valide</span>
+                    <span *ngIf="NumPassport.errors?.minlength" class="error"><sup>*</sup>Name shouldn't be less than 8 number</span>
+                  </div>
+                  <div class="input-group">
+                   <!-- <div class="dropdown-menu">-->
+                      <select class="form-control" formControlName="TypeUser" name="TypeUser"
+                      requiredclass="dropdown-menu btn btn-secondary dropdown-toggle"
+                      data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          <option class="dropdown-item" value="Admin">Admin</option>
+                          <option class="dropdown-item" value="User">User</option>
+                      </select>
+                    </div>
+
+                  <div class="input-group">
+                    <input class="form-control" type="email" placeholder="Email" formControlName="Email" required>
+                    <span *ngIf="Email.touched && Email.invalid" class="error"><sup>*</sup>Please provide email</span>
+                    <span *ngIf="Email.errors?.pattern" class="error"><sup>*</sup>Please enter correct email</span>
+                  </div>
+                  <div class="input-group">
+                    <input class="form-control" type="password" placeholder="Password" formControlName="Password" required>
+                    <span *ngIf="Password.touched && Password.invalid" class="error"><sup>*</sup>Please enter Passport number valide</span>
+                    <span *ngIf="Password.errors?.minlength" class="error"><sup>*</sup>Name shouldn't be less than 8 number</span>
+                </div>
+									<div class="kt-login__actions">
+										<button id="kt_login_signup_submit" type="submit" class="btn btn-brand btn-pill kt-login__btn-primary">Sign Up</button>&nbsp;&nbsp;
+										<button id="kt_login_signup_cancel" class="btn btn-secondary btn-pill kt-login__btn-secondary">Cancel</button>
+									</div>
+                </form>
+							</div>
+						</div>
+					</div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

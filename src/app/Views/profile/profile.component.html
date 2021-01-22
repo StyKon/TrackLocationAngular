@@ -1,0 +1,33 @@
+<app-scrollebar></app-scrollebar>
+<app-navbar></app-navbar>
+<div class="kt-grid__item kt-grid__item--fluid kt-grid kt-grid--hor kt-wrapper">
+
+  <!-- begin:: Subheader -->
+  <div class="kt-subheader   kt-grid__item" id="kt_subheader">
+    <div class="kt-subheader__main">
+      <h3 class="kt-subheader__title">
+        Profile Settings </h3>
+      <span class="kt-subheader__separator kt-hidden"></span>
+    </div>
+  </div>
+<table>
+  <thead>
+    <tr>
+      <td>
+        Current User
+      </td>
+      <td>
+        token
+      </td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{ this.currentUser}}</td>
+    </tr>
+    <tr>
+      <td>{{ this.TokenValue}}</td>
+    </tr>
+  </tbody>
+</table>
+<a [routerLink]="['/FamilyCar']" routerLinkActive="router-link-active" >FamilyCar</a>
